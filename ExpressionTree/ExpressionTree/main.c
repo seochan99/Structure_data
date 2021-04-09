@@ -13,7 +13,7 @@ int main(void)
     char exp[] = "12+7*";
     BTreeNode * eTree = MakeExpTree(exp);
 
-    printf("전위: ");
+    printf("전위 계산: ");
     ShowPrefixTypeExp(eTree); printf("\n");
 
     printf("중위: ");
