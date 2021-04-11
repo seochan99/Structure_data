@@ -28,11 +28,6 @@ typedef struct _heap
     HeapElem heapArr[HEAP_LEN];
 }Heap;
 
-//typedef struct _heap{
-//    PriorityComp *comp; // typedef int (*PriorityComp)(HData d1,HData d2);
-//    int numOfData;
-//    HData heapArr[HEAP_LEN]; // typedef char HData
-//};
 
 void HeapInit(Heap * ph);
 int HIsEmpty(Heap * ph);
