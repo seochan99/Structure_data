@@ -6,7 +6,7 @@
 //
 
 #include <stdio.h>
-#include "UsefulHeap.h"
+#include "PriorityQueue.h"
 
 int DataPriorityComp(char ch1, char ch2)
 {
@@ -14,21 +14,21 @@ int DataPriorityComp(char ch1, char ch2)
 }
 int main(void)
 {
-    Heap heap;
-    HeapInit(&heap,DataPriorityComp);
+    PQueue pq;
+    PQueueInit(&pq,DataPriorityComp);
     
-    HInsert(&heap, 'A');
-    HInsert(&heap, 'B');
-    HInsert(&heap, 'C');
-    printf("%c \n", HDelete(&heap));
+    PEnqueue(&pq, 'A');
+    PEnqueue(&pq, 'B');
+    PEnqueue(&pq, 'C');
+    printf("%c \n", PDequeue(&pq));
     
-    HInsert(&heap, 'A');
-    HInsert(&heap, 'B');
-    HInsert(&heap, 'C');
-    printf("%c \n",HDelete(&heap));
+    PEnqueue(&pq, 'A');
+    PEnqueue(&pq, 'A');
+    PEnqueue(&pq, 'A');
+    printf("%c \n",PDequeue(&pq));
     
-    while(!HIsEmpty(&heap))
-        printf("%c \n", HDelete(&heap));
+    while(!PQIsEmpty(&pq))
+        printf("%c \n", PDequeue(&pq));
     
     return 0;
 }

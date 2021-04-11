@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9871FF282622F21E007B4656 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 9871FF272622F21E007B4656 /* main.c */; };
 		9871FF312622F31C007B4656 /* UsefulHeap.c in Sources */ = {isa = PBXBuildFile; fileRef = 9871FF302622F31C007B4656 /* UsefulHeap.c */; };
+		9871FF362622FD71007B4656 /* PriorityQueue.c in Sources */ = {isa = PBXBuildFile; fileRef = 9871FF352622FD71007B4656 /* PriorityQueue.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		9871FF272622F21E007B4656 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		9871FF2F2622F230007B4656 /* UsefulHeap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UsefulHeap.h; sourceTree = "<group>"; };
 		9871FF302622F31C007B4656 /* UsefulHeap.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = UsefulHeap.c; sourceTree = "<group>"; };
+		9871FF342622FCCE007B4656 /* PriorityQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PriorityQueue.h; sourceTree = "<group>"; };
+		9871FF352622FD71007B4656 /* PriorityQueue.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = PriorityQueue.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,8 @@
 			isa = PBXGroup;
 			children = (
 				9871FF272622F21E007B4656 /* main.c */,
+				9871FF342622FCCE007B4656 /* PriorityQueue.h */,
+				9871FF352622FD71007B4656 /* PriorityQueue.c */,
 				9871FF2F2622F230007B4656 /* UsefulHeap.h */,
 				9871FF302622F31C007B4656 /* UsefulHeap.c */,
 			);
@@ -124,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9871FF282622F21E007B4656 /* main.c in Sources */,
+				9871FF362622FD71007B4656 /* PriorityQueue.c in Sources */,
 				9871FF312622F31C007B4656 /* UsefulHeap.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
