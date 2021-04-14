@@ -1,72 +1,59 @@
 #include <stdio.h>
-#include <stdlib.h>
 
-void MergeTwoArea(int arr[], int left, int mid, int right)
+void Swap(int arr[],int idx1, int idx2)
 {
-    int fIdx =left;
-    int rIdx = mid + 1;
-    int i;
-    
-    //  병합 한 결과를 담을 배열 sortArr의 동적 할당!
-    int * sortArr = (int*)malloc(sizeof(int)*(right+1));
-    int sIdx =left;
-    
-    while(fIdx<=mid&&rIdx<=right)
-    {
-        // 병합 할 두 영역의 데이터를 비교하여, 정렬 순서대로 sortArr에 하나씩 옮겨 담는다.
-        if(arr[fIdx]<=arr[rIdx])
-            sortArr[sIdx] =arr[fIdx++];
-        else
-            sortArr[sIdx]= arr[rIdx++];
-        
-        sIdx++;
-    }
-    
-    if(fIdx > mid) // 배열의 앞부분이 모두 SortArr에 옮겨 졌다면
-    {
-        //배열 뒷부분에 남은 데이터들을 모두 sortArr에 그대로 옮긴다.
-        for(i=rIdx;i<=right;i++,sIdx++)
-                sortArr[sIdx]= arr[i];
-    }
-    else{ // 배열의 뒷부분이 모두 옮겨졌다면
-        for(i=fIdx;i<=mid;i++,sIdx++) //배열의 앞부분에 남은 데이터들을 그대로 옮긴다.
-        sortArr[sIdx] = arr[i];
-    }
-    
-    for(i=left; i<=right; i++)
-    arr[i] = sortArr[i];
-    
-    free(sortArr);
-    
+    int temp = arr[idx1];
+    arr[idx1] = arr[idx2];
+    arr[idx2] = temp;
 }
 
-void MergeSort(int arr[],int left,int right)
+int Partition(int arr[],int left, int right)
 {
-    int mid;
+    int pivot = arr[left]; // pivot is most left
+    int low = left+1;
+    int high = right;
     
-    if(left < right)
+    //교차되기전까지 반복
+    while(low <= high)
     {
-        //중간 지점을 게산한다.
-        mid = (left+right)/2;
-        
-        MergeSort(arr, left, mid);
-        MergeSort(arr, mid+1, right);
-        
-        MergeTwoArea(arr, left, mid, right);
+        // find higher than pivot
+        while(pivot >= arr[low] && low<= right)
+            low++; // low going right
+        // find lower than pivot
+        while(pivot<=arr[high] && high >= (left+1))
+            high --;
+        //교차 되지 않았을때 서로 교환
+        if(low<=high)
+            Swap(arr,low,high);
+    }
+    Swap(arr,left,high); // 피벗과 하이가 가리키는 대상 교환
+    return high; // 옮겨진 피벗의 위치정보 반환.
+}
+
+void QuickSort(int arr[],int left, int right)
+{
+    if(left<=right)
+    {
+        int pivot = Partition(arr, left, right);
+        QuickSort(arr, left, pivot-1);
+        QuickSort(arr, pivot+1, right);
     }
 }
 
 int main(void)
 {
-    int arr[7]={3,2,4,1,7,6,5};
+//    int arr[7] = {3,2,4,1,7,6,5};
+    int arr[3] = {3,3,3};
+    
+    int len = sizeof(arr)/sizeof(int);
     int i;
     
-    MergeSort(arr,0,sizeof(arr)/sizeof(int)-1);
+    QuickSort(arr, 0, len-1); //arr에 대해서 퀵 정렬 진행 시작 !
     
-    for (i=0; i<7; i++) {
+    for(i=0;i<len;i++)
+    {
         printf("%d ",arr[i]);
     }
-    
     printf("\n");
     return 0;
 }
