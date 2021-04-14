@@ -6,13 +6,31 @@ void Swap(int arr[],int idx1, int idx2)
     arr[idx1] = arr[idx2];
     arr[idx2] = temp;
 }
+int MedianOfThree(int arr[],int left,int right)
+{
+    int samples[3] = {left,(left+right)/2,right}; //values is index
+    if(arr[samples[0]]>arr[samples[1]])
+           Swap(samples,0,1);
+    
+    if(arr[samples[1]] > arr[samples[2]])
+        Swap(samples, 1, 2);
+    if(arr[samples[0]]>arr[samples[1]])
+        Swap(samples, 0, 1);
+        
+    return samples[1];
+}
 
 int Partition(int arr[],int left, int right)
 {
-    int pivot = arr[left]; // pivot is most left
+    int pIdx = MedianOfThree(arr, left, right); // pivot is most left
+    int pivot = arr[pIdx];
+    
     int low = left+1;
     int high = right;
     
+    Swap(arr, left, pIdx); // 피벗을 가장 왼쪽으로 이동
+    
+    printf("피벗 : %d \n",pivot); // 피벗의 확인을 위해서 추가할 문장
     //교차되기전까지 반복
     while(low <= high)
     {
@@ -42,8 +60,8 @@ void QuickSort(int arr[],int left, int right)
 
 int main(void)
 {
-//    int arr[7] = {3,2,4,1,7,6,5};
-    int arr[3] = {3,3,3};
+    int arr[15] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};
+//    int arr[3] = {;
     
     int len = sizeof(arr)/sizeof(int);
     int i;
