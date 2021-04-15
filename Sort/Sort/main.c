@@ -1,77 +1,62 @@
 #include <stdio.h>
+#include "ListBaseQueue.h"
 
-void Swap(int arr[],int idx1, int idx2)
+#define BUCKET_NUM 10
+
+void RadixSort(int arr[],int num, int maxLen)
 {
-    int temp = arr[idx1];
-    arr[idx1] = arr[idx2];
-    arr[idx2] = temp;
-}
-int MedianOfThree(int arr[],int left,int right)
-{
-    int samples[3] = {left,(left+right)/2,right}; //values is index
-    if(arr[samples[0]]>arr[samples[1]])
-           Swap(samples,0,1);
+    // 매개변수 maxLen에는 정렬대상 중 가장 긴 데이터의 길이 정보가 전달
+    Queue bukets[BUCKET_NUM];
+    int bi;
+    int pos;
+    int di;
+    int divfac = 1;
+    int radix;
     
-    if(arr[samples[1]] > arr[samples[2]])
-        Swap(samples, 1, 2);
-    if(arr[samples[0]]>arr[samples[1]])
-        Swap(samples, 0, 1);
+    // 10 개의 버킷 초기화
+    for(bi =0; bi<BUCKET_NUM; bi++)
+        QueueInit(&bukets[bi]);
+    
+    //가장 긴 데이터의 길이만큼 반복
+    for(pos=0;pos<maxLen;pos++)
+    {
+        //정렬대상의 수만큼 반복
+        for(di=0;di<num;di++)
+        {
+            //N번째 자리의 숫자 추출
+            radix = (arr[di]/divfac)%10;
+            
+            // 추출한 숫자를 근거로 법킷에 데이터 저장
+            Enqueue(&bukets[radix], arr[di]);
+        }
         
-    return samples[1];
-}
-
-int Partition(int arr[],int left, int right)
-{
-    int pIdx = MedianOfThree(arr, left, right); // pivot is most left
-    int pivot = arr[pIdx];
-    
-    int low = left+1;
-    int high = right;
-    
-    Swap(arr, left, pIdx); // 피벗을 가장 왼쪽으로 이동
-    
-    printf("피벗 : %d \n",pivot); // 피벗의 확인을 위해서 추가할 문장
-    //교차되기전까지 반복
-    while(low <= high)
-    {
-        // find higher than pivot
-        while(pivot >= arr[low] && low<= right)
-            low++; // low going right
-        // find lower than pivot
-        while(pivot<=arr[high] && high >= (left+1))
-            high --;
-        //교차 되지 않았을때 서로 교환
-        if(low<=high)
-            Swap(arr,low,high);
-    }
-    Swap(arr,left,high); // 피벗과 하이가 가리키는 대상 교환
-    return high; // 옮겨진 피벗의 위치정보 반환.
-}
-
-void QuickSort(int arr[],int left, int right)
-{
-    if(left<=right)
-    {
-        int pivot = Partition(arr, left, right);
-        QuickSort(arr, left, pivot-1);
-        QuickSort(arr, pivot+1, right);
+        //  버킷 수만큼 반복
+        for(bi=0,di=0;bi<BUCKET_NUM;bi++)
+        {
+            //버킷에 저장된 것 순서대로 다 꺼내서 다시 arr에 저장
+            while(!QIsEmpty(&bukets[bi]))
+                arr[di++] = Dequeue(&bukets[bi]);
+        }
+        
+        // N번째 자리의 숫자 추출을 위한 피제수 증가
+        divfac *= 10;
     }
 }
 
 int main(void)
 {
-    int arr[15] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};
-//    int arr[3] = {;
+    int arr[7]={13,212,14,7141,10987,6,15};
     
     int len = sizeof(arr)/sizeof(int);
     int i;
-    
-    QuickSort(arr, 0, len-1); //arr에 대해서 퀵 정렬 진행 시작 !
+    ;
+    RadixSort(arr, len, 5);
     
     for(i=0;i<len;i++)
-    {
         printf("%d ",arr[i]);
-    }
     printf("\n");
     return 0;
 }
+
+
+
