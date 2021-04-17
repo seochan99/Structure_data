@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		989382C8262B1BAD00B139D9 /* BinaryTree2.c in Sources */ = {isa = PBXBuildFile; fileRef = 989382C7262B1BAD00B139D9 /* BinaryTree2.c */; };
+		989382CB262B1F6100B139D9 /* BinarySearchTree.c in Sources */ = {isa = PBXBuildFile; fileRef = 989382CA262B1F6100B139D9 /* BinarySearchTree.c */; };
 		98E6AC5426285D3F001E29A6 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 98E6AC5326285D3F001E29A6 /* main.c */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +25,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		989382C5262B1B7E00B139D9 /* BinarySearchTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinarySearchTree.h; sourceTree = "<group>"; };
+		989382C6262B1BAD00B139D9 /* BinaryTree2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BinaryTree2.h; path = ../../../../../Downloads/Data_Structure_Src/Ch11/BinarySearchTree/BinaryTree2.h; sourceTree = "<group>"; };
+		989382C7262B1BAD00B139D9 /* BinaryTree2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = BinaryTree2.c; path = ../../../../../Downloads/Data_Structure_Src/Ch11/BinarySearchTree/BinaryTree2.c; sourceTree = "<group>"; };
+		989382CA262B1F6100B139D9 /* BinarySearchTree.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = BinarySearchTree.c; sourceTree = "<group>"; };
 		98E6AC5026285D3F001E29A6 /* BinarySearchTree */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BinarySearchTree; sourceTree = BUILT_PRODUCTS_DIR; };
 		98E6AC5326285D3F001E29A6 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				98E6AC5326285D3F001E29A6 /* main.c */,
+				989382C5262B1B7E00B139D9 /* BinarySearchTree.h */,
+				989382CA262B1F6100B139D9 /* BinarySearchTree.c */,
+				989382C7262B1BAD00B139D9 /* BinaryTree2.c */,
+				989382C6262B1BAD00B139D9 /* BinaryTree2.h */,
 			);
 			path = BinarySearchTree;
 			sourceTree = "<group>";
@@ -119,6 +129,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				98E6AC5426285D3F001E29A6 /* main.c in Sources */,
+				989382C8262B1BAD00B139D9 /* BinaryTree2.c in Sources */,
+				989382CB262B1F6100B139D9 /* BinarySearchTree.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
