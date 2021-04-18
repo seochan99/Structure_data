@@ -8,6 +8,16 @@
 #include "BinaryTree2.h"
 #include "BinarySearchTree.h"
 
+void BSTMakeAndInit(BTreeNode ** pRoot)
+{
+    *pRoot = NULL;
+}
+
+BSTData BSTGetNodeData(BTreeNode * bst)
+{
+    return GetData(bst);
+}
+
 void BSTInsert(BTreeNode ** pRoot, BSTData data)
 {
     BTreeNode * pNode = NULL; //parent Node
@@ -48,4 +58,23 @@ void BSTInsert(BTreeNode ** pRoot, BSTData data)
     }
     
 
+}
+
+BTreeNode *BSTSearch(BTreeNode * bst, BSTData target)
+{
+    BTreeNode * cNode = bst; // current Node
+    BSTData cd; // current Data
+    
+    while(cNode != NULL)
+    {
+        cd = GetData(cNode);
+        
+        if(target == cd)
+            return cNode;
+        else if(target<cd)
+            cNode = GetLeftSubTree(cNode);
+        else
+            cNode = GetRightSubTree(cNode);
+    }
+    return NULL;
 }
