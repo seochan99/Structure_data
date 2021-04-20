@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		984D6617262DA9B100154CA5 /*  .c in Sources */ = {isa = PBXBuildFile; fileRef = 984D6616262DA9B100154CA5 /*  .c */; };
 		984D6622262DC06D00154CA5 /* BinaryTree3.c in Sources */ = {isa = PBXBuildFile; fileRef = 984D661E262DC06D00154CA5 /* BinaryTree3.c */; };
-		9859BC64262E5A6200B004C8 /* BinarySearchTree3.c in Sources */ = {isa = PBXBuildFile; fileRef = 9859BC5F262E5A6200B004C8 /* BinarySearchTree3.c */; };
-		9859BC66262E5A6200B004C8 /* AVLRebalance.c in Sources */ = {isa = PBXBuildFile; fileRef = 9859BC61262E5A6200B004C8 /* AVLRebalance.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,10 +28,6 @@
 		984D6616262DA9B100154CA5 /*  .c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = " .c"; sourceTree = "<group>"; };
 		984D661E262DC06D00154CA5 /* BinaryTree3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = BinaryTree3.c; path = ../../../../../Downloads/Data_Structure_Src/Ch11/BinarySearchTreeDelAdded/BinaryTree3.c; sourceTree = "<group>"; };
 		984D6621262DC06D00154CA5 /* BinaryTree3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BinaryTree3.h; path = ../../../../../Downloads/Data_Structure_Src/Ch11/BinarySearchTreeDelAdded/BinaryTree3.h; sourceTree = "<group>"; };
-		9859BC5D262E5A6200B004C8 /* BinarySearchTree3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BinarySearchTree3.h; path = ../../../../../Downloads/Data_Structure_Src/Ch12/AVLTree/BinarySearchTree3.h; sourceTree = "<group>"; };
-		9859BC5E262E5A6200B004C8 /* AVLRebalance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AVLRebalance.h; path = ../../../../../Downloads/Data_Structure_Src/Ch12/AVLTree/AVLRebalance.h; sourceTree = "<group>"; };
-		9859BC5F262E5A6200B004C8 /* BinarySearchTree3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = BinarySearchTree3.c; path = ../../../../../Downloads/Data_Structure_Src/Ch12/AVLTree/BinarySearchTree3.c; sourceTree = "<group>"; };
-		9859BC61262E5A6200B004C8 /* AVLRebalance.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = AVLRebalance.c; path = ../../../../../Downloads/Data_Structure_Src/Ch12/AVLTree/AVLRebalance.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,10 +61,6 @@
 			isa = PBXGroup;
 			children = (
 				984D6616262DA9B100154CA5 /*  .c */,
-				9859BC61262E5A6200B004C8 /* AVLRebalance.c */,
-				9859BC5E262E5A6200B004C8 /* AVLRebalance.h */,
-				9859BC5F262E5A6200B004C8 /* BinarySearchTree3.c */,
-				9859BC5D262E5A6200B004C8 /* BinarySearchTree3.h */,
 				984D661E262DC06D00154CA5 /* BinaryTree3.c */,
 				984D6621262DC06D00154CA5 /* BinaryTree3.h */,
 			);
@@ -134,9 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				984D6622262DC06D00154CA5 /* BinaryTree3.c in Sources */,
-				9859BC66262E5A6200B004C8 /* AVLRebalance.c in Sources */,
 				984D6617262DA9B100154CA5 /*  .c in Sources */,
-				9859BC64262E5A6200B004C8 /* BinarySearchTree3.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
