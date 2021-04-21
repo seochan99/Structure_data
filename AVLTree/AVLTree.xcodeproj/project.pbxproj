@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		984D6617262DA9B100154CA5 /*  .c in Sources */ = {isa = PBXBuildFile; fileRef = 984D6616262DA9B100154CA5 /*  .c */; };
 		984D6622262DC06D00154CA5 /* BinaryTree3.c in Sources */ = {isa = PBXBuildFile; fileRef = 984D661E262DC06D00154CA5 /* BinaryTree3.c */; };
+		98E037ED26305A6300B2147E /* AVLRebalance.c in Sources */ = {isa = PBXBuildFile; fileRef = 98E037EC26305A6300B2147E /* AVLRebalance.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		984D6616262DA9B100154CA5 /*  .c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = " .c"; sourceTree = "<group>"; };
 		984D661E262DC06D00154CA5 /* BinaryTree3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = BinaryTree3.c; path = ../../../../../Downloads/Data_Structure_Src/Ch11/BinarySearchTreeDelAdded/BinaryTree3.c; sourceTree = "<group>"; };
 		984D6621262DC06D00154CA5 /* BinaryTree3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BinaryTree3.h; path = ../../../../../Downloads/Data_Structure_Src/Ch11/BinarySearchTreeDelAdded/BinaryTree3.h; sourceTree = "<group>"; };
+		98E037EB26305A6300B2147E /* AVLRebalance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVLRebalance.h; sourceTree = "<group>"; };
+		98E037EC26305A6300B2147E /* AVLRebalance.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = AVLRebalance.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +47,8 @@
 		984D660A262DA9B100154CA5 = {
 			isa = PBXGroup;
 			children = (
+				98E037EB26305A6300B2147E /* AVLRebalance.h */,
+				98E037EC26305A6300B2147E /* AVLRebalance.c */,
 				984D6615262DA9B100154CA5 /* AVLTree */,
 				984D6614262DA9B100154CA5 /* Products */,
 			);
@@ -124,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				984D6622262DC06D00154CA5 /* BinaryTree3.c in Sources */,
+				98E037ED26305A6300B2147E /* AVLRebalance.c in Sources */,
 				984D6617262DA9B100154CA5 /*  .c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
