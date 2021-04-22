@@ -34,15 +34,15 @@ int main(void)
     
     clNode2 = GetLeftSubTree(clNode); // 1, 2의 왼쪽 노드
     crNode2 = GetRightSubTree(clNode);// 3, 2의 오른쪽 노드
-    printf("왼쪽 2 : %d, 오른쪽 2 : %d \n",GetData(clNode2),GetData(crNode2));
+    printf("왼쪽 1-1 : %d, 왼쪽 1-2 : %d \n",GetData(clNode2),GetData(crNode2));
     
     clNode2 = GetLeftSubTree(crNode); // 5, 6의 왼쪽 노드
     crNode2 = GetRightSubTree(crNode); // 8, 6의 오른쪽 노드
-    printf("왼쪽 3 : %d, 오른쪽 3 : %d \n",GetData(clNode2),GetData(crNode2));
+    printf("오른쪽 1-1 : %d, 오른쪽 1-2 : %d \n",GetData(clNode2),GetData(crNode2));
     
     clNode3 = GetLeftSubTree(crNode2); //7, 8의 왼쪽 노드
     crNode3 = GetRightSubTree(crNode2); // 9, 8의 오른쪽 노드
-    printf("왼쪽 4 : %d, 오른쪽 4 : %d \n",GetData(clNode3),GetData(crNode3));
+    printf("오른쪽 1-2-1 : %d, 오른쪽 1-2-2 : %d \n",GetData(clNode3),GetData(crNode3));
     
     return 0;
 }
