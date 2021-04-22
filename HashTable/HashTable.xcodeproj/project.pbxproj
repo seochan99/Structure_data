@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		988BC0B3263197250092E974 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 988BC0B2263197250092E974 /* main.c */; };
+		988BC0BC2631A8390092E974 /* Person.c in Sources */ = {isa = PBXBuildFile; fileRef = 988BC0BB2631A8390092E974 /* Person.c */; };
+		988BC0C02631AAD90092E974 /* Slot.c in Sources */ = {isa = PBXBuildFile; fileRef = 988BC0BF2631AAD90092E974 /* Slot.c */; };
+		988BC0C42631AC400092E974 /* Table.c in Sources */ = {isa = PBXBuildFile; fileRef = 988BC0C32631AC400092E974 /* Table.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,12 @@
 /* Begin PBXFileReference section */
 		988BC0AF263197250092E974 /* HashTable */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HashTable; sourceTree = BUILT_PRODUCTS_DIR; };
 		988BC0B2263197250092E974 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		988BC0BA2631A8390092E974 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		988BC0BB2631A8390092E974 /* Person.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Person.c; sourceTree = "<group>"; };
+		988BC0BE2631AAD90092E974 /* Slot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Slot.h; sourceTree = "<group>"; };
+		988BC0BF2631AAD90092E974 /* Slot.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Slot.c; sourceTree = "<group>"; };
+		988BC0C22631AC400092E974 /* Table.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Table.h; sourceTree = "<group>"; };
+		988BC0C32631AC400092E974 /* Table.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Table.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +67,12 @@
 			isa = PBXGroup;
 			children = (
 				988BC0B2263197250092E974 /* main.c */,
+				988BC0BA2631A8390092E974 /* Person.h */,
+				988BC0BB2631A8390092E974 /* Person.c */,
+				988BC0BE2631AAD90092E974 /* Slot.h */,
+				988BC0C22631AC400092E974 /* Table.h */,
+				988BC0C32631AC400092E974 /* Table.c */,
+				988BC0BF2631AAD90092E974 /* Slot.c */,
 			);
 			path = HashTable;
 			sourceTree = "<group>";
@@ -118,6 +133,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				988BC0C42631AC400092E974 /* Table.c in Sources */,
+				988BC0BC2631A8390092E974 /* Person.c in Sources */,
+				988BC0C02631AAD90092E974 /* Slot.c in Sources */,
 				988BC0B3263197250092E974 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

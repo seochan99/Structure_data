@@ -1,33 +1,58 @@
-//
-//  main.c
-//  HashTable
-//
-//  Created by 서희찬 on 2021/04/22.
-//
-
 #include <stdio.h>
+#include <stdlib.h>
+#include "Person.h"
+#include "Table.h"
 
-typedef struct _empInfo
+int MyHashFunc(int k)
 {
-    int empNum; // number
-    int age; // age
-}EmpInfo;
-
+    return k % 100;
+}
 
 int main(void)
 {
-    EmpInfo empInfoArr[1000];
-    EmpInfo ei;
-    int eNum;
+    Table myTbl;
+    Person * np;
+    Person * sp;
+    Person * rp;
     
-    printf("사번과 나이 입력 : ");
-    scanf("%d %d",&(ei.empNum),&(ei.age));
-    empInfoArr[ei.empNum] = ei; // 단번에 저장
+    TBLInit(&myTbl, MyHashFunc);
     
-    printf("확인을 원하는 직원의 사번 입력 : ");
-    scanf("%d",&eNum);
+    // 데이터 입력
+    np = MakePersonData(20120003, "Lee", "SEOUL");
+    TBLInsert(&myTbl, GetSSN(np), np);
     
-    ei = empInfoArr[eNum]; // 단번에 탐색 !
-    printf("사번 : %d, 나이 : %d \n",ei.empNum,ei.age);
+    np = MakePersonData(20130012, "Seo", "MASAN");
+    TBLInsert(&myTbl, GetSSN(np), np);
+    
+    np = MakePersonData(20120025, "Hwe", "SEOUL");
+    TBLInsert(&myTbl, GetSSN(np), np);
+    
+    // 데이터 탐색
+    sp = TBLSearch(&myTbl, 20120003);
+    if(sp != NULL)
+        ShowPerInfo(sp);
+    
+    sp = TBLSearch(&myTbl, 20130012);
+    if(sp != NULL)
+        ShowPerInfo(sp);
+    
+    sp = TBLSearch(&myTbl, 20120025);
+    if(sp != NULL)
+        ShowPerInfo(sp);
+    
+    
+    // 데이터 삭제
+    rp = TBLDelete(&myTbl, 20120003);
+    if(rp != NULL)
+        free(rp);
+    
+    rp = TBLDelete(&myTbl, 20130012);
+    if(rp != NULL)
+        free(rp);
+    
+    rp = TBLDelete(&myTbl, 20120025);
+    if(rp != NULL)
+        free(rp);
+    
     return 0;
 }
