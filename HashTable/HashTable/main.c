@@ -18,39 +18,39 @@ int main(void)
     TBLInit(&myTbl, MyHashFunc);
     
     // 데이터 입력
-    np = MakePersonData(20120003, "Lee", "SEOUL");
+    np = MakePersonData(900254, "Lee", "SEOUL");
     TBLInsert(&myTbl, GetSSN(np), np);
     
-    np = MakePersonData(20130012, "Seo", "MASAN");
+    np = MakePersonData(900139, "Seo", "MASAN");
     TBLInsert(&myTbl, GetSSN(np), np);
     
-    np = MakePersonData(20120025, "Hwe", "SEOUL");
+    np = MakePersonData(900827, "Hwe", "SEOUL");
     TBLInsert(&myTbl, GetSSN(np), np);
     
     // 데이터 탐색
-    sp = TBLSearch(&myTbl, 20120003);
+    sp = TBLSearch(&myTbl, 900254);
     if(sp != NULL)
         ShowPerInfo(sp);
     
-    sp = TBLSearch(&myTbl, 20130012);
+    sp = TBLSearch(&myTbl, 900139);
     if(sp != NULL)
         ShowPerInfo(sp);
     
-    sp = TBLSearch(&myTbl, 20120025);
+    sp = TBLSearch(&myTbl, 900827);
     if(sp != NULL)
         ShowPerInfo(sp);
     
     
     // 데이터 삭제
-    rp = TBLDelete(&myTbl, 20120003);
+    rp = TBLDelete(&myTbl, 900254);
     if(rp != NULL)
         free(rp);
     
-    rp = TBLDelete(&myTbl, 20130012);
+    rp = TBLDelete(&myTbl, 900139);
     if(rp != NULL)
         free(rp);
     
-    rp = TBLDelete(&myTbl, 20120025);
+    rp = TBLDelete(&myTbl, 900827);
     if(rp != NULL)
         free(rp);
     

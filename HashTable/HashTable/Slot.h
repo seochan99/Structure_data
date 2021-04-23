@@ -12,13 +12,11 @@
 typedef int Key; // ssn
 typedef Person * Value;
 
-enum SlotStatus {EMPTY, DELETED, INUSE};
 
 typedef struct _slot
 {
     Key key;
     Value val;
-    enum SlotStatus status;
 }Slot;
 
 #endif /* Slot_h */

@@ -8,6 +8,7 @@
 #ifndef Table_h
 #define Table_h
 
+#include "DLinkedList.h"
 #include "Slot.h"
 
 #define MAX_TBL 100
@@ -15,7 +16,7 @@
 typedef int HashFunc(Key k);
 
 typedef struct _table{
-    Slot tbl[MAX_TBL];
+    List tbl[MAX_TBL];
     HashFunc * hf;
 }Table;
 

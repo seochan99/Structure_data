@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9817801F2632AC5900BFDFAC /* DLinkedList.c in Sources */ = {isa = PBXBuildFile; fileRef = 9817801D2632AC5900BFDFAC /* DLinkedList.c */; };
 		988BC0B3263197250092E974 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 988BC0B2263197250092E974 /* main.c */; };
 		988BC0BC2631A8390092E974 /* Person.c in Sources */ = {isa = PBXBuildFile; fileRef = 988BC0BB2631A8390092E974 /* Person.c */; };
 		988BC0C02631AAD90092E974 /* Slot.c in Sources */ = {isa = PBXBuildFile; fileRef = 988BC0BF2631AAD90092E974 /* Slot.c */; };
@@ -26,6 +27,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9817801D2632AC5900BFDFAC /* DLinkedList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = DLinkedList.c; path = ../../../../../Downloads/Data_Structure_Src/Ch13/ChainedHashTable/DLinkedList.c; sourceTree = "<group>"; };
+		9817801E2632AC5900BFDFAC /* DLinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLinkedList.h; path = ../../../../../Downloads/Data_Structure_Src/Ch13/ChainedHashTable/DLinkedList.h; sourceTree = "<group>"; };
 		988BC0AF263197250092E974 /* HashTable */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HashTable; sourceTree = BUILT_PRODUCTS_DIR; };
 		988BC0B2263197250092E974 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		988BC0BA2631A8390092E974 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
@@ -72,6 +75,8 @@
 				988BC0BE2631AAD90092E974 /* Slot.h */,
 				988BC0C22631AC400092E974 /* Table.h */,
 				988BC0C32631AC400092E974 /* Table.c */,
+				9817801D2632AC5900BFDFAC /* DLinkedList.c */,
+				9817801E2632AC5900BFDFAC /* DLinkedList.h */,
 				988BC0BF2631AAD90092E974 /* Slot.c */,
 			);
 			path = HashTable;
@@ -133,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9817801F2632AC5900BFDFAC /* DLinkedList.c in Sources */,
 				988BC0C42631AC400092E974 /* Table.c in Sources */,
 				988BC0BC2631A8390092E974 /* Person.c in Sources */,
 				988BC0C02631AAD90092E974 /* Slot.c in Sources */,
