@@ -21,7 +21,7 @@ int main(void)
     np = MakePersonData(900254, "Lee", "SEOUL");
     TBLInsert(&myTbl, GetSSN(np), np);
     
-    np = MakePersonData(900139, "Seo", "MASAN");
+    np = MakePersonData(900354, "Seo", "MASAN");
     TBLInsert(&myTbl, GetSSN(np), np);
     
     np = MakePersonData(900827, "Hwe", "SEOUL");
@@ -32,7 +32,7 @@ int main(void)
     if(sp != NULL)
         ShowPerInfo(sp);
     
-    sp = TBLSearch(&myTbl, 900139);
+    sp = TBLSearch(&myTbl, 900354);
     if(sp != NULL)
         ShowPerInfo(sp);
     
@@ -46,7 +46,7 @@ int main(void)
     if(rp != NULL)
         free(rp);
     
-    rp = TBLDelete(&myTbl, 900139);
+    rp = TBLDelete(&myTbl, 900354);
     if(rp != NULL)
         free(rp);
     
