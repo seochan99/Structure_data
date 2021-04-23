@@ -30,6 +30,6 @@ void GraphDestroy(ALGraph * pg);
 void AddEdge(ALGraph * pg, int fromV, int toV );
 
 // 간선의 정보 출력
-void ShowGraphEdgeInfo(ALGraph * pg);
+void ShowGraphEdgeInfo(ALGraph * pg)
 
 #endif /* ALGraph_h */
