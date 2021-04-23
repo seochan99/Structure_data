@@ -53,14 +53,14 @@ void ShowGraphEdgeInfo(ALGraph * pg)
     int i;
     int vx;
     
-    for (i=0; i<pg->numV; i++) {
+    for (i=0; i<pg->numV; i++) { // for 문을 돌면서 리스트의 모든 키에 접근한다.
         printf("%c 와 연결된 정점 : ",i + 65); // 아스키코드로 !
         
-        if(LFirst(&(pg->adjList[i]), &vx))
+        if(LFirst(&(pg->adjList[i]), &vx)) //vx에 저장된다.
         {
             printf("%c ",vx+65);
             
-            while(LNext(&(pg->adjList[i]), &vx))
+            while(LNext(&(pg->adjList[i]), &vx)) // 연결된 노드가 있다면 출력
                 printf("%c ",vx+65);
         }
         printf("\n");
