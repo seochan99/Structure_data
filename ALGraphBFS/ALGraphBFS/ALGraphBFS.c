@@ -84,7 +84,7 @@ int WhoIsPrecede(int data1, int data2)
 
 int VisitVertex(ALGraph * pg, int visitV)
 {
-    if(wpg->visitInfo[visitV]==0) // visitV에 처음 방문일 때 '참' 인 이프문
+    if(pg->visitInfo[visitV]==0) // visitV에 처음 방문일 때 '참' 인 이프문
     {
         pg->visitInfo[visitV] = 1; // 방문한것으로 기록
         printf("%c ", visitV+65); //방문 정점 이름 출력
