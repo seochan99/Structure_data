@@ -32,7 +32,6 @@
 		981B85FD2635A39200D8A086 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		981B86052635A39C00D8A086 /* ALGraphKruskal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALGraphKruskal.h; sourceTree = SOURCE_ROOT; };
 		981B86062635A39C00D8A086 /* ALGraphKruskal.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ALGraphKruskal.c; sourceTree = SOURCE_ROOT; };
-		981B86092635A60900D8A086 /* ALEdge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALEdge.h; sourceTree = "<group>"; };
 		981B860A2635A63600D8A086 /* DLinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLinkedList.h; path = ../../../../../Downloads/Data_Structure_Src/Ch14/ALGraphKruskal/DLinkedList.h; sourceTree = "<group>"; };
 		981B860B2635A63600D8A086 /* ArrayBaseStack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ArrayBaseStack.c; path = ../../../../../Downloads/Data_Structure_Src/Ch14/ALGraphKruskal/ArrayBaseStack.c; sourceTree = "<group>"; };
 		981B860C2635A63600D8A086 /* UsefulHeap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = UsefulHeap.c; path = ../../../../../Downloads/Data_Structure_Src/Ch14/ALGraphKruskal/UsefulHeap.c; sourceTree = "<group>"; };
@@ -41,6 +40,7 @@
 		981B860F2635A63600D8A086 /* DLinkedList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = DLinkedList.c; path = ../../../../../Downloads/Data_Structure_Src/Ch14/ALGraphKruskal/DLinkedList.c; sourceTree = "<group>"; };
 		981B86102635A63600D8A086 /* UsefulHeap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UsefulHeap.h; path = ../../../../../Downloads/Data_Structure_Src/Ch14/ALGraphKruskal/UsefulHeap.h; sourceTree = "<group>"; };
 		981B86112635A63600D8A086 /* PriorityQueue.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = PriorityQueue.c; path = ../../../../../Downloads/Data_Structure_Src/Ch14/ALGraphKruskal/PriorityQueue.c; sourceTree = "<group>"; };
+		981B86172635B4A600D8A086 /* ALEdge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALEdge.h; path = ../../../../../Downloads/Data_Structure_Src/Ch14/ALGraphKruskal/ALEdge.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +76,7 @@
 				981B85FD2635A39200D8A086 /* main.c */,
 				981B86052635A39C00D8A086 /* ALGraphKruskal.h */,
 				981B86062635A39C00D8A086 /* ALGraphKruskal.c */,
-				981B86092635A60900D8A086 /* ALEdge.h */,
+				981B86172635B4A600D8A086 /* ALEdge.h */,
 				981B860B2635A63600D8A086 /* ArrayBaseStack.c */,
 				981B860D2635A63600D8A086 /* ArrayBaseStack.h */,
 				981B860F2635A63600D8A086 /* DLinkedList.c */,
