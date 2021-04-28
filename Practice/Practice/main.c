@@ -68,34 +68,51 @@
 
 
 //4
-//
 //int main(void)
 //{
 //    int num1;
+//    int arr[100];
 //    int result = 0;
 //    int max=0;
-//    int min=10;
+//    int min=10000;
 //    printf("입력을 원하는 숫자의 갯수를 입력해주세요 : ");
 //    scanf("%d ",&num1);
 //
-//    for(int i=0;i<=num1;i++)
+//    for(int i=0;i<num1;i++)
 //    {
-//        int num2;
-//        scanf("%d",&num2);
-//        result += num2;
-//
-//        if(num2>max)
-//            max = num2;
-//        if(min>num2)
-//            num2 = min; // 수정
+//        scanf("%d",&arr[i]);
+//        result += arr[i];
+//    }
+//    for(int j=0;j<num1;j++)
+//    {
+//        if(arr[j]>=max)
+//            max = arr[j];
+//        if (arr[j]<min)
+//            min = arr[j];
 //    }
 //
 //    printf("총 합 : %d ", result);
 //    printf("최댓값 : %d ", max);
-//    printf("최솟값 : %d ", min);
-//
-//
+//    printf("최솟값 : %d \n", min);
 //
 //    return 0;
 //}
+
+
+// 5
+int main(void)
+{
+    int num1;
+    int result=0;
+    printf("약수의 합을 원하는 정수를 입력해주세요.\n");
+    scanf("%d",&num1);
+    for(int i=1;i<=num1;i++)
+    {
+        if(num1%i==0)
+            result += i;
+    }
+    printf("약수의 총 합 : %d \n", result);
+    
+    return 0;
+}
 
