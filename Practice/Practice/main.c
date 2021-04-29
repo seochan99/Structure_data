@@ -83,22 +83,26 @@ int main(void)
     int num1,i,max,min;
     int arr[100];
     int result = 0;
+    
     while(1)
     {
         printf("입력을 원하는 숫자의 갯수를 입력해주세요 : ");
-        scanf("%d ",&num1);
+        scanf("%d",&num1);
+        
         if(1<=num1 && 100>=num1)
             break;
         else
-            printf("1이상 100이하의 숫자를 입력해주새요.");
+            printf("1이상 100이하의 숫자를 입력해주새요.\n");
     }
-    printf("%d 개의 숫자를 입력해주세요",num1);
+    printf("%d개의 숫자를 입력해주세요 \n",num1);
+    // 최대값 구하기
     for(int i=0;i<num1;i++)
     {
         scanf("%d",&arr[i]);
         result += arr[i];
     }
 
+    // 최대 최소 구하기
      max = min = arr[0];
      for(i=1; i<num1; i++)
      {
