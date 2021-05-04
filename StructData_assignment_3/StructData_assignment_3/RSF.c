@@ -41,6 +41,12 @@ int ListEmpty(List * plist){ //비어있는지 체크 함수
         return FALSE;
 }
 
+// 플레이어 승리시 win += 1, win>=2 검사
+//void PlayerWin()
+
+// 플레이어 패배시 lose += 1 함수
+// void PlayerLose()
+
 int Lfirst(List * plist,Data * pWin, Data * pLose)
 {
     if(plist->head == NULL)
@@ -82,3 +88,6 @@ int LPrevious(List * plist, Data * pWin, Data * pLose)
 
 // 노드제거
 // void LoseRemove(List *plist)
+
+
+//

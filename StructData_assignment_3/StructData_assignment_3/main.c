@@ -19,7 +19,7 @@ int main(void)
     int win=0,lose=0;
     int numNode; // 초기 노드의 갯수
     int userNum=0; //가위바위보
-    int computerNum=0;
+    int computerNum=0; // 컴퓨터의 선택
     printf("초기 노드 개수를 입력해주세요 : ");
     scanf("%d",&numNode);
     
@@ -52,13 +52,12 @@ int main(void)
         if((userNum==1&& computerNum ==3)||(userNum==2&& computerNum ==1)||(userNum==3&& computerNum ==2))
         {
             printf("컴퓨터가 패배했습니다.");
-            // lose +1 추가 
+            // lose +1 추가
             // lose >=2 체크
             // 맞으면 노드 삭제
             // 컴퓨터 왼쪽 노드 이동 (left)
         }
         else if(userNum ==  computerNum)
-            
         {
             printf("비겼습니다.");
             continue;
@@ -74,9 +73,12 @@ int main(void)
         
         
         
-//        // 총 노드 갯수 출력 : LCount 함수
-//        // node상태 화면 출력
+        // 총 노드 갯수 출력 : LCount 함수
+        // node상태 화면 출력
             }
+    
+    
+    
     return 0;
         }
 
