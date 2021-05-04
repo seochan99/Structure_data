@@ -14,8 +14,8 @@
             filePath = "StructData_assignment_3/RSF.h"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "DBLinkedList"
             landmarkType = "16">
          </BreakpointContent>
