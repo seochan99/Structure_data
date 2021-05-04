@@ -7,55 +7,80 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include "RSF.h"
 
 
 int main(void)
 {
+    srand((unsigned)time(NULL));
+    List list;
     int i,j;
+    int win=0,lose=0;
     int numNode; // 초기 노드의 갯수
-    int userNum; //가위바위보
-    int computerNum;
+    int userNum=0; //가위바위보
+    int computerNum=0;
     printf("초기 노드 개수를 입력해주세요 : ");
     scanf("%d",&numNode);
     
-    // numNode 만큼 노드 만들기
+    ListInit(&list);
     
+    // numNode 만큼 노드 만들기
+    for(i=0;i<numNode;i++)
+    {
+        ListInsert(&list); // 노드 생성 완료
+    }
+
+    
+    //가위바위보
     while(userNum!=4)
     {
-        
-        printf("선택하세요.(1.가위,2.바위,3.보,4.끝내기) : ");
-        scanf("%d",&userNum);
-        // computerNum 구하기
-        // 가위바위보 하기
-        
-        // 가위바위보 알고리즘 //.
-        // 만약 플레이어가 이기면
-        // win 올리는데, 2 이상이면 0으로 변경 후 노드 양쪽 삽입 후(LInsert) 현재 노드 오른쪽으로 이동(LNext 함수)
-        // 만약 플레이어가 지면
-        // lose올리고 lose가 2이상이면 현재 노드 삭제 후 (앞으로 이동 후 ) 현재 노드 왼쪽으로 이동(LPrev 함수)
-        
-        // 비기면 다시 시작(continue)
-        
-        // 총 노드 갯수 출력 : LCount 함수
-        while(j=1;j<=numNode;j++)
+        while(1) // 에러 처리
         {
-            //만약 노드의 끝이 아니라면
-                // win = 첫번째 노드의 데이타(헤드가 가리키는 곳)
-                // lose = 첫번째 노드의 데이타
-                //만약 현재노드가 아니라면
-                printf("node %d : win = %d, lose = %d<->",j,win,lose);
-                // 만약 현재 노드라면
-                printf("node* %d : win = %d, lose = %d<->",j);
-            //노드의 끝이라면
-            //출력 후
-            //탈출 ~ !
-        }
+            printf("선택하세요.(1.가위,2.바위,3.보,4.끝내기) : ");
+            scanf("%d",&userNum);
+            if(userNum<=4 && userNum>0)
+                break;
+            else
+                printf("1~4사이의 숫자를 입력해주세요.\n");
         }
         
-    }
-    
-    
-    
+        // computerNum 구하기
+        computerNum = rand()%3+1;
+        
+        // 가위바위보 하기
+        if((userNum==1&& computerNum ==3)||(userNum==2&& computerNum ==1)||(userNum==3&& computerNum ==2))
+        {
+            printf("컴퓨터가 패배했습니다.");
+            // lose +1 추가 
+            // lose >=2 체크
+            // 맞으면 노드 삭제
+            // 컴퓨터 왼쪽 노드 이동 (left)
+        }
+        else if(userNum ==  computerNum)
+            
+        {
+            printf("비겼습니다.");
+            continue;
+        }
+        else if((userNum == 1 && computerNum == 2)||(userNum == 2 && computerNum == 3)||(userNum == 3 && computerNum == 1))
+        {
+            printf("컴퓨터가 승리했습니다.");
+            // win +1
+            // win>=2 체크
+            // 맞으면 양 옆에 노드 추가 (left right)
+            // 컴퓨터 오른쪽 노드로 이동 (right)
+        }
+        
+        
+        
+//        // 총 노드 갯수 출력 : LCount 함수
+//        // node상태 화면 출력
+            }
     return 0;
-}
+        }
+
+    
+    
+    
+    
