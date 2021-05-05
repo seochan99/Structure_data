@@ -36,8 +36,7 @@ int ListEmpty(List * plist); //
 
 void insertEnd(List*plist); // 끝에 노드 추가
 
-void LWinInsert(Node * computer_ptr)
-; // 이겼을 시 양 옆에 win.lose 을 가진 데이터 삽입
+void LWinInsert(List * plist,Node * computer_ptr); // 이겼을 시 양 옆에 win.lose 을 가진 데이터 삽입
 int Lfirst(List * plist,Data * pWin, Data * pLose);
  // 첫 노드
 int LNext(List * plist, Data * pWin, Data * pLose);
@@ -49,9 +48,13 @@ int LCount(List * plist); // 모든 노드의 개수 반환
 
 void printNode(List * plist);
 
-void playerLose(Node * computer_ptr);
+void playerLose(List * plist);
 
-void playerWin(Node * computer_ptr);
+void playerWin(List * plist);
+
+void LoseRemove(List * plist);
+
+//void computerPtr(List * plist);
 
 // 양방향 삽입
 //void LWinInsert(List * plist, Data * win, Data * lose)
