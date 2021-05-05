@@ -16,7 +16,6 @@ int main(void)
     List list;
 
     int i;
-    int win=0,lose=0;
     int numNode; // 초기 노드의 갯수
     int userNum=0; //가위바위보
     int computerNum=0; // 컴퓨터의 선택
@@ -67,7 +66,7 @@ int main(void)
         // 가위바위보 하기
         if((userNum==1&& computerNum ==3)||(userNum==2&& computerNum ==1)||(userNum==3&& computerNum ==2)) // 플레이어 승
         {
-            printf("컴퓨터가 패배했습니다.\n");
+            printf("컴퓨터가 패배했습니다.왼쪽 노드로 이동합니다.\n");
             playerWin(&list);
             
         }
@@ -78,7 +77,7 @@ int main(void)
         }
         else if((userNum == 1 && computerNum ==  2)||(userNum == 2 && computerNum == 3)||(userNum == 3 && computerNum == 1)) // 플레이어 짐
         {
-            printf("컴퓨터가 승리했습니다.\n");
+            printf("컴퓨터가 승리했습니다. 오른쪽 노드로 이동합니다. \n");
             playerLose(&list);
         }
         
