@@ -25,8 +25,8 @@ void ListInsert(List * plist){
         plist->head->left = newNode;
     
     
-    newNode ->left = plist->head; // 새노드의 이전이 기존 노드를 가리키게한다 (원형 )
-    plist->head->right = newNode;
+    newNode ->left = plist->head->left; // 새노드의 이전이 기존 노드를 가리키게한다 (원형 )
+    plist->head->right = newNode; //
     plist->head = newNode;
 
     (plist->numOfNode)++; // 업업 !
@@ -79,14 +79,101 @@ int LPrevious(List * plist, Data * pWin, Data * pLose)
     return TRUE;
 }
 
+void playerWin(Node * computer_ptr)
+{
+    computer_ptr->win +=1; // 승 하나 올리기
+    if((computer_ptr->win) >= 2) // 2이상 일때
+    {
+        //노드 양방향 삽입
+        computer_ptr->win = 0; // 승리 0초기화
+        LWinInsert(computer_ptr); // 양쪽 새노드 삽입
+    }
+    computer_ptr = computer_ptr->left; // 왼쪽으로 이동
+}
+
+void playerLose(Node * computer_ptr)
+{
+    computer_ptr->lose += 1; // 패배 하나 올리기
+    if((computer_ptr->lose)>=2) // 패배 2이상
+    {
+        //노드 삭제함수
+    }
+    computer_ptr = computer_ptr->right;
+}
+
+// void deleteNode(Node ) 삭제 함수
+
 // 양방향 삽입
-//void LWinInsert(List * plist, Data * win, Data * lose)
-//{
-//
-//}
+// 컴퓨터 노드 받기
+void LWinInsert(Node * computer_ptr)
+{
+    // 오른쪽 노드 생성
+    Node * newNodeRight = (Node*)malloc(sizeof(Node));
+    newNodeRight->win=0;
+    newNodeRight->lose=0;
+    
+    //왼쪽 노드 생성
+    Node * newNodeLeft = (Node*)malloc(sizeof(Node));
+    newNodeLeft->win=0;
+    newNodeLeft->lose=0;
+    
+    // 연결해주기 
+    
+}
 
 // 노드제거
 // void LoseRemove(List *plist)
 
 
 //
+
+void insertEnd(List*plist) // 노드 뒤로 이어가기
+{
+    if(plist->head== NULL) // 리스트가 비어있다면
+    {
+        Node * newNode = (Node*)malloc(sizeof(Node));
+        newNode->win=0;
+        newNode->lose=0;
+        newNode->right = newNode->left = newNode;//자기자신을 가리킴 -> 원형
+        plist->head = newNode;
+        return;
+    }
+    
+    //노드가 비어있지 않다면
+    Node * last = plist->head->left; // 마지막 노드 찾기
+    Node * newNode = (Node*)malloc(sizeof(Node));
+    newNode->win = 0;
+    newNode->lose = 0; // 초기화 진행
+    
+    newNode->right = plist->head;
+    plist->head->left = newNode;
+    newNode->left = last;
+    last->right = newNode;
+    
+    (plist->numOfNode)++; // 노드 숫자 증가
+    newNode->name = plist->numOfNode; // 노드 번호 할당
+}
+int LCount(List * plist)
+{
+    return plist->numOfNode;
+}
+
+
+
+void printNode(List * plist){
+    if(plist->head==NULL)
+    {
+        return ;
+        
+    }
+    plist->cur = plist->head; // cur 이 첫번째 노드 가리킴
+    printf("HEAD");
+    for(int k=0;k<plist->numOfNode;k++)
+    {
+        printf("->NODE %d WIN:%D LOSE:%d <- ",plist->cur->name,plist->cur->win,plist->cur->lose);
+        plist->cur = plist->cur->right;
+    }
+    
+}
+
+

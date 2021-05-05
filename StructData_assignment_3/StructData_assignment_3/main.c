@@ -21,7 +21,7 @@ int main(void)
     int userNum=0; //가위바위보
     int computerNum=0; // 컴퓨터의 선택
     int numberOfNode=0; // 노드번호
-    printf("초기 노드 개수를 입력해주세요 : ");
+    printf("초기 노드 개수를 입력해주세요  : ");
     scanf("%d",&numNode);
     
     ListInit(&list);
@@ -29,11 +29,12 @@ int main(void)
     // numNode 만큼 노드 만들기
     for(i=0;i<numNode;i++)
     {
-        ListInsert(&list); // 노드 생성 완료
+        insertEnd(&list); // 노드 추가
     }
-
+    
     
     //가위바위보
+
     while(userNum!=4)
     {
         while(1) // 에러 처리
@@ -75,19 +76,10 @@ int main(void)
         
         
         // 총 노드 갯수 출력 : LCount 함수
+        printf("총 노드 갯수 : %d",LCount(&list));
         // node상태 화면 출력
-        for(j=0;plist->numOfNode;j++)
-        {
-            if(Lfirst(&list, &win, &lose)) // 첫 노드라면
-            {
-                printf("HEAD-> NODE %d Win %d Lose %d <- ",노드번호,win,lose);
-            }
-            while (LNext(&list, &win, &lose)) {
-                printf("다음 다음 노드 ~ %d %d %d",노드번호,win,lose);
-            }
-            printf("HEAD NODE %d WIN : %D LOSE : %d",numberOfNode,plist->cur->win,plist->cur->lose);
-            plist->cur = plist->cur->right;
-        }
+        printNode(&list);
+        
     }
     
     

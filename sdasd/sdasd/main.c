@@ -119,7 +119,7 @@ void gameLose(Node* computer_ptr) {
 int main(int argc, char* argv[]) {
     int a;
     a = atoi(argv[0]);
-    nodeHead* head = createHead();
+    node               Head* head = createHead();
     Node* computer_ptr;
     
     for (int i = 0; i < a; i++) {

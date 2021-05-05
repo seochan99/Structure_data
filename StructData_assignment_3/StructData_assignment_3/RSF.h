@@ -17,6 +17,7 @@ typedef struct node // 노드 구조체
     Data lose; // 플레이아 진 횟수 저장
     struct node * right; // next
     struct node * left; // prev
+    Data name; // 노드 이름
 }Node;
 
 typedef struct _dbLinkedList{ // 이중연결려스트
@@ -30,8 +31,13 @@ typedef DBLinkedList List;
 
 void ListInit(List * plist); // 초기화
 int ListEmpty(List * plist); //
-void ListInsert(List * plist); // 초기 numNode 노드 생성
-void LWinInsert(List  *plist); // 이겼을 시 양 옆에 win.lose 을 가진 데이터 삽입
+
+//void ListInsert(List * plist); // 초기 numNode 노드 생성
+
+void insertEnd(List*plist); // 끝에 노드 추가
+
+void LWinInsert(Node * computer_ptr)
+; // 이겼을 시 양 옆에 win.lose 을 가진 데이터 삽입
 int Lfirst(List * plist,Data * pWin, Data * pLose);
  // 첫 노드
 int LNext(List * plist, Data * pWin, Data * pLose);
@@ -40,6 +46,12 @@ int LPrevious(List * plist, Data * pWin, Data * pLose)
 ; //이전 노드 탐색
 
 int LCount(List * plist); // 모든 노드의 개수 반환
+
+void printNode(List * plist);
+
+void playerLose(Node * computer_ptr);
+
+void playerWin(Node * computer_ptr);
 
 // 양방향 삽입
 //void LWinInsert(List * plist, Data * win, Data * lose)
