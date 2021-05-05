@@ -14,11 +14,13 @@ int main(void)
 {
     srand((unsigned)time(NULL));
     List list;
+    List *plist;
     int i,j;
     int win=0,lose=0;
     int numNode; // 초기 노드의 갯수
     int userNum=0; //가위바위보
     int computerNum=0; // 컴퓨터의 선택
+    int numberOfNode=0; // 노드번호
     printf("초기 노드 개수를 입력해주세요 : ");
     scanf("%d",&numNode);
     
@@ -74,7 +76,19 @@ int main(void)
         
         // 총 노드 갯수 출력 : LCount 함수
         // node상태 화면 출력
+        for(j=0;plist->numOfNode;j++)
+        {
+            if(Lfirst(&list, &win, &lose)) // 첫 노드라면
+            {
+                printf("HEAD-> NODE %d Win %d Lose %d <- ",노드번호,win,lose);
             }
+            while (LNext(&list, &win, &lose)) {
+                printf("다음 다음 노드 ~ %d %d %d",노드번호,win,lose);
+            }
+            printf("HEAD NODE %d WIN : %D LOSE : %d",numberOfNode,plist->cur->win,plist->cur->lose);
+            plist->cur = plist->cur->right;
+        }
+    }
     
     
     

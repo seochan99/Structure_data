@@ -20,7 +20,7 @@ typedef struct node // 노드 구조체
 }Node;
 
 typedef struct _dbLinkedList{ // 이중연결려스트
-    Node * cumputer_ptr;
+    Node * cumputer_ptr; // 컴퓨터 
     Node * head; // 머리(맨 앞 데이터 표시)
     Node * cur; // 조회 목적
     int numOfNode; // 총 노드의 겟수

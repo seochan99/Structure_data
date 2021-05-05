@@ -11,6 +11,7 @@ void ListInit(List * plist) // 초기화 함수
     plist->head = NULL;
     plist->numOfNode = 0;
     // cur은 LFirst 호출시 초기화 되니 별도 초기화 X
+    plist->cumputer_ptr = plist->head;
 }
 
 void ListInsert(List * plist){
