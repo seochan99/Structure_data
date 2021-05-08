@@ -24,14 +24,12 @@ typedef struct _dbLinkedList{ // 이중연결려스트
     Node * cumputer_ptr; // 컴퓨터 
     Node * head; // 머리(맨 앞 데이터 표시)
     Node * cur; // 조회 목적
-    int numOfNode; // 총 노드의 겟수
+    Data numOfNode; // 총 노드의 겟수
 }DBLinkedList;
 
 typedef DBLinkedList List;
 
 void ListInit(List * plist); // 초기화
-
-
 
 void insertEnd(List*plist); // 끝에 노드 추가
 

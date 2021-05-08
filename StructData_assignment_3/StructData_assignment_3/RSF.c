@@ -11,8 +11,7 @@ void ListInit(List * plist) // 초기화 함수
     plist->cumputer_ptr = plist->head; // 컴퓨터 머리가리키기 이게맞나..?
     plist->head = NULL;
     plist->numOfNode = 0;
-    // cur은 LFirst 호출시 초기화 되니 별도 초기화 X
-    plist->cumputer_ptr = plist->head;
+//    plist->cumputer_ptr = plist->head;
 }
 
 // 양방향 삽입
@@ -129,6 +128,7 @@ int LCount(List * plist)
 
 // 노드 출력
 void printNode(List * plist){
+    int numNodes = plist->numOfNode+1;
     if(plist->head==NULL)
     {
         return ;
@@ -141,7 +141,7 @@ void printNode(List * plist){
         printf("HEAD");
     // 제일 처음 출력 => HEAD*
     // 컴퓨터 노드 위치 까지 계산 후 그 위치에 * 찍기...
-    for(int k=0;k<plist->numOfNode+1;k++)
+    for(int j=0 ;j<numNodes;j++)
     {
         if(plist->cur == plist->cumputer_ptr)
         {

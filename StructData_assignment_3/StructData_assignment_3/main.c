@@ -16,7 +16,6 @@ int main(void)
     List list;
 
     int i,j;
-    int win=0,lose=0;
     int numNode; // 초기 노드의 갯수
     int userNum=0; //가위바위보
     int computerNum=0; // 컴퓨터의 선택
