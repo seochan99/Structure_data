@@ -10,7 +10,7 @@ typedef char name[100];
 
 typedef struct _node
 {
-    Data name;
+    char name;
     struct _node * next;
 } Node;
 
