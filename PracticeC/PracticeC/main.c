@@ -2,6 +2,12 @@
 #include <time.h>
 #include <stdlib.h>
 
+int getRandomNumber(int level);
+void showQuestion(int level,int num1, int num2);
+void success();
+void fail();
+
+
 int main(void)
 {
 //    int age = 12; // 자료형 작성
@@ -210,31 +216,90 @@ int main(void)
 //    }
 //
     // Up and Down
+//    srand(time(NULL));
+//    int num = rand()%100 +1 ; // 1~100 return
+//    printf("숫자 : %d \n",num);
+//    int ans =0;
+//    int chance =5;
+//    while(chance>0)
+//    {
+//        printf("남은 기회 : %d \n",chance);
+//        printf("1~100 숫자를 맞춰보세용 ~ \n");
+//        scanf("%d",&ans);
+//        if(ans==num)
+//        {
+//            printf("정답입니다 ~ !\n");
+//            break;
+//        }
+//        else if(ans>num)
+//        {
+//            printf("DOWN!!");
+//        }
+//        else if(ans<num)
+//        {
+//            printf("Up");
+//        }
+//            chance--;
+//    }
+//
+    //계산기
+//    void p(int num); //선언
+//
+//    int num = 2;
+//    p(num);
+//
+//    num++;
+//    p(num);
+//
+//
+        //door is 5
     srand(time(NULL));
-    int num = rand()%100 +1 ; // 1~100 return
-    printf("숫자 : %d \n",num);
-    int ans =0;
-    int chance =5;
-    while(chance>0)
+    int count = 0;
+    for(int i=1;i<=5;i++)
     {
-        printf("남은 기회 : %d \n",chance);
-        printf("1~100 숫자를 맞춰보세용 ~ \n");
+        int num1 = getRandomNumber(i);
+        int num2 = getRandomNumber(i);
+        showQuestion(i,num1,num2);
+        
+        int ans = -1;
         scanf("%d",&ans);
-        if(ans==num)
+        if(ans == -1)
         {
-            printf("정답입니다 ~ !\n");
-            break;
+            printf("end program");
+            exit(0); // end program
         }
-        else if(ans>num)
+        else if(ans==num1*num2)
         {
-            printf("DOWN!!");
+            success();
+            count++;
         }
-        else if(ans<num)
-        {
-            printf("Up");
+        else{
+            fail();
         }
-            chance--;
     }
     
-        return 0;
-    }
+    printf("success !!!");
+    return 0;
+}
+
+
+int getRandomNumber(int level)
+{
+    return rand()%(level*7)+1;
+}
+
+void showQuestion(int level,int num1, int num2)
+{
+    printf("\n\n\n ### %d 번째 비밀번호 ### \n",level);
+    printf("\n\t %d X %d = ? \n\n",num1,num2);
+    printf("\n 비밀번호를 입력하세여 (종료 : -1) >> ");
+}
+
+void success(void)
+{
+    printf("good ~!");
+}
+void fail(void)
+{
+    printf("Nop!!!");
+}
