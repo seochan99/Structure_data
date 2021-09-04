@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		980B1CC826DCED1400B80753 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 980B1CC726DCED1400B80753 /* main.c */; };
 		980B1CD026E239A100B80753 /* array.c in Sources */ = {isa = PBXBuildFile; fileRef = 980B1CCF26E239A100B80753 /* array.c */; };
+		980B1CD326E2403900B80753 /* pointer.c in Sources */ = {isa = PBXBuildFile; fileRef = 980B1CD226E2403900B80753 /* pointer.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,7 @@
 		980B1CC726DCED1400B80753 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		980B1CCE26E239A100B80753 /* array.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = array.h; sourceTree = "<group>"; };
 		980B1CCF26E239A100B80753 /* array.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = array.c; sourceTree = "<group>"; };
+		980B1CD226E2403900B80753 /* pointer.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pointer.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				980B1CC726DCED1400B80753 /* main.c */,
 				980B1CCE26E239A100B80753 /* array.h */,
 				980B1CCF26E239A100B80753 /* array.c */,
+				980B1CD226E2403900B80753 /* pointer.c */,
 			);
 			path = PracticeC;
 			sourceTree = "<group>";
@@ -125,6 +128,7 @@
 			files = (
 				980B1CC826DCED1400B80753 /* main.c in Sources */,
 				980B1CD026E239A100B80753 /* array.c in Sources */,
+				980B1CD326E2403900B80753 /* pointer.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
